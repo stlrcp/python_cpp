@@ -1,7 +1,7 @@
 ---
-title: Hello World
+title: github 以及 git 的简单配置
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+对于存放代码的工具，我们使用最多的应该就是 [github](https://github.com/)! 我们可以使用它来存放我们的代码，同时也可以看到许多大神们开源的项目 ，具体怎么查找就先不在这里展示了，相信大家会根据自己的需要去搜索的, 如果我们想要更好的使用 [github](https://github.com/)! 就需要在我们的本地配置 [git](https://git-scm.com/downloads) 工具! 这里重点记录下自己是如何配置 git 部分的。
 
 ## Quick Start
 
