@@ -111,6 +111,8 @@
           <span class="archive-article-date">
               阅读量 <span id="busuanzi_value_page_pv"></span>
           </span>
+          <span class="post-count">本文 70 字</span>
+          <span class="post-count">大约需要 1 分钟</span>
         
       </header>
     
@@ -133,8 +135,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/05/init_hexo/" data-id="cljpgmk720002szs79guh4zan" data-title="init hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/07/05/init_hexo/" data-id="cljquwvka00028bs764bjdoy4" data-title="init hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
+      
+        <a href="/2023/07/05/init_hexo/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count fa fa-comment" data-xid="/2023/07/05/init_hexo/" itemprop="commentCount"></span>
+          Comments
+        </a>
       
       
     </footer>
@@ -159,6 +166,10 @@
 </article>
 
 
+
+  <section id="comments" class="vcomment">
+
+  </section>
 </section>
         
           <aside id="sidebar">
@@ -210,7 +221,7 @@
         &copy; 2023 Mming Wang
       </div>
       <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Landscape</a> by Litten
       </div>
     </div>
     <div calss="count-span">
@@ -257,6 +268,29 @@
 
 
 
+
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "Sa2wGlFZ5bTktL87H28XD6f4-MdYXbMMI",
+        appKey: "Yg1RlbboPdEYpM5Wj7TZMuRb",
+        placeholder: "Just go go",
+        pageSize:'10',
+        avatar:'mm',
+        lang:'zh-cn'
+    });
+</script>
 
   </div>
 </body>
