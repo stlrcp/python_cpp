@@ -31,12 +31,14 @@ $ cp -r lib/* /usr/local/lib/
 $ cp -r include/* /usr/local/include/
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+到此已经安装好nodejs: [localhost](http://localhost:4000/)
 
-### Deploy to remote sites
+### 先验证是否安装成功，再安装hexo
 
 ``` bash
-$ hexo deploy
+$ node --version
+$ npm --version
+$ npm install -g hexo
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+查看版本: [hexo v](https://hexo.io/docs/one-command-deployment.html)
