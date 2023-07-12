@@ -5,26 +5,30 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## Quick Start
 
-### Create a new post
+wget https://nodejs.org/download/release/v15.14.0/node-v15.14.0-linux-x64.tar.gz
+
+### 下载 nodejs 的安装包
 
 ``` bash
-$ madir test_tmp
+$ wget https://nodejs.org/download/release/v15.14.0/node-v15.14.0-linux-x64.tar.gz
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+nodejs安装包地址: [nodejs](https://nodejs.org/download/release/v15.14.0/)
 
-### Run server
+### 解压安装包
 
 ``` bash
-$ hexo server
+$ tar -zxvf node-v15.14.0-linux-x64.tar.gz
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+博客地址: [hicairo](https://www.hicairo.com/)
 
-### Generate static files
+### 拷贝文件到系统目录
 
 ``` bash
-$ hexo generate
+$ cp -r bin/* /usr/local/bin/
+$ cp -r lib/* /usr/local/lib/
+$ cp -r include/* /usr/local/include/
 ```
 
 More info: [Generating](https://hexo.io/docs/generating.html)
