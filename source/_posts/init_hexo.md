@@ -42,3 +42,6 @@ $ npm install -g hexo
 ```
 
 查看版本: [hexo v](https://hexo.io/docs/one-command-deployment.html)
+
+
+至此，基本简单的安装完成
