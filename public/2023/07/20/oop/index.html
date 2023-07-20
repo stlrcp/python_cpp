@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="init hexo, python &amp;&amp; c++">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="OOP &amp;&amp; D_H, python &amp;&amp; c++">
+    <meta name="description" content="编译单元Declarations vs. Definitions
+
+A .cpp file is a compile unit
+
+Only declarations are allowed to be in .h
+
+extern varia">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>init hexo | python &amp;&amp; c++</title>
+    <title>OOP &amp;&amp; D_H | python &amp;&amp; c++</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +340,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">init hexo</h1>
+                    <h1 class="description center-align post-title">OOP &amp;&amp; D_H</h1>
                 </div>
             </div>
         </div>
@@ -375,7 +381,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-07-17
+                    2023-07-20
                 </div>
                 
 
@@ -396,21 +402,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>wget <a target="_blank" rel="noopener" href="https://nodejs.org/download/release/v15.14.0/node-v15.14.0-linux-x64.tar.gz">https://nodejs.org/download/release/v15.14.0/node-v15.14.0-linux-x64.tar.gz</a></p>
-<h3 id="下载-nodejs-的安装包"><a href="#下载-nodejs-的安装包" class="headerlink" title="下载 nodejs 的安装包"></a>下载 nodejs 的安装包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://nodejs.org/download/release/v15.14.0/node-v15.14.0-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+                <p>编译单元<br>Declarations vs. Definitions</p>
+<ul>
+<li><p>A .cpp file is a compile unit</p>
+</li>
+<li><p>Only declarations are allowed to be in .h</p>
+<ul>
+<li>extern variables</li>
+<li>function prototypes</li>
+<li>class&#x2F;struct declaration</li>
+</ul>
+</li>
+<li><p>#include “xx.h”: first search in the current directory, then the directories declared somewhere</p>
+</li>
+<li><p>#include &lt;xx.h&gt;: seach in the specified directories</p>
+</li>
+</ul>
+<h2 id="编译指令"><a href="#编译指令" class="headerlink" title="编译指令"></a>编译指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cpp a.cpp</span><br><span class="line">$ g++ a.cpp --save-temps</span><br><span class="line">$ more a.ii</span><br></pre></td></tr></table></figure>
 
-<p>nodejs安装包地址: <a target="_blank" rel="noopener" href="https://nodejs.org/download/release/v15.14.0/">nodejs</a></p>
-<h3 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf node-v15.14.0-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<p>Tips for header</p>
+<ol>
+<li>One class declaration per header file</li>
+<li>Associated with one source file in the same prefix of file name</li>
+<li>The contents of a header file is surrounded with #ifndef #define #endif</li>
+</ol>
+<h3 id="ld-–linking"><a href="#ld-–linking" class="headerlink" title="ld –linking"></a>ld –linking</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ g++ a.cpp b.cpp --save-temps -Wall</span><br><span class="line">$ g++ a.cpp --save-temps -c -D_MY_H_</span><br></pre></td></tr></table></figure>
 
-<p>博客地址: <a target="_blank" rel="noopener" href="https://www.hicairo.com/">hicairo</a></p>
-<h3 id="拷贝文件到系统目录"><a href="#拷贝文件到系统目录" class="headerlink" title="拷贝文件到系统目录"></a>拷贝文件到系统目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> -r bin/* /usr/local/bin/</span><br><span class="line">$ <span class="built_in">cp</span> -r lib/* /usr/local/lib/</span><br><span class="line">$ <span class="built_in">cp</span> -r include/* /usr/local/include/</span><br></pre></td></tr></table></figure>
+<p>Standard header file structure<br>#ifndef HEADER_FLAG<br>#define HEADER_FLAG<br>&#x2F;&#x2F; Type declaration here…<br>#endif &#x2F;&#x2F; HEADER_FLAG</p>
+<h3 id="时钟面向对象部分"><a href="#时钟面向对象部分" class="headerlink" title="时钟面向对象部分"></a>时钟面向对象部分</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Diagram</span> &#123;</span><br><span class="line">    ClockDisplay</span><br><span class="line">    - hours : NumberDisplay</span><br><span class="line">    - minutes : NumberDisplay</span><br><span class="line"></span><br><span class="line">    +<span class="built_in">start</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>到此已经安装好nodejs: <a target="_blank" rel="noopener" href="http://localhost:4000/">localhost</a></p>
-<h3 id="先验证是否安装成功，再安装hexo"><a href="#先验证是否安装成功，再安装hexo" class="headerlink" title="先验证是否安装成功，再安装hexo"></a>先验证是否安装成功，再安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node --version</span><br><span class="line">$ npm --version</span><br><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-
-<p>查看版本: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">hexo v</a></p>
-<p>至此，基本简单的安装完成</p>
+<p>myDisplay -&gt; ClockDisplay -&gt;NumberDisplay<br>{ NumberDisplay<br>-limit : int</p>
+<ul>
+<li><p>value : int<br>+increase(): boolean<br>}<br>class ClockDisplay {<br>  NumberDisplay hours;<br>  NumberDisplay minutes;</p>
+<p>  Constructor and methods omitted.</p>
+</li>
+</ul>
+<p>}<br>class NumberDisplay {<br>    int limit;<br>    int value;</p>
+<pre><code>Constructor and methods omitted.
+</code></pre>
+<p>}</p>
 
                 
             </div>
@@ -437,7 +467,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/07/17/init_hexo/">http://example.com/2023/07/17/init_hexo/</a>
+                    <a href="http://example.com/2023/07/20/oop/">http://example.com/2023/07/20/oop/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -818,9 +848,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/07/20/oop/">
                     <div class="card-image">
@@ -838,9 +869,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -849,6 +880,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -859,13 +891,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/07/12/hello-world/">
+                <a href="/2023/07/17/init_hexo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="github 以及 git 的简单配置">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="init hexo">
                         
-                        <span class="card-title">github 以及 git 的简单配置</span>
+                        <span class="card-title">init hexo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -876,7 +908,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-17
                             </span>
                         <span class="publish-author">
                             
